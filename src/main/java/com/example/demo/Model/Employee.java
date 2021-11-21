@@ -21,7 +21,6 @@ public class Employee {
 //defining age as column name
 	@Column
 	private String lastName;
-//defining email as column name
 
 	public int getId() {
 		return id;
