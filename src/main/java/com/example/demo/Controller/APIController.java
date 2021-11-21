@@ -31,7 +31,7 @@ public class APIController {
 		ModelClass model1 = new ModelClass();
 
 		model1.setStudent_id("1");
-		model1.setStudent_name("sandhya");
+		model1.setStudent_name("Amar");
 		model1.setAge("25");
 
 		ModelClass model2 = new ModelClass();
