@@ -15,20 +15,20 @@ public class EmployeeService {
 	@Autowired
 	EmployeeRepository employeeRepository;
 
-//getting all student records
-	public List<Employee> getAllStudent() {
+//getting all Employee records
+	public List<Employee> getAllEmployee() {
 		List<Employee> employees = new ArrayList<Employee>();
 		employeeRepository.findAll().forEach(employee -> employees.add(employee));
 		return employees;
 	}
 
 //getting a specific record
-	public Employee getStudentById(int id) {
+	public Employee getEmployeeById(int id) {
 		return employeeRepository.findById(id).get();
 	}
 
-	public void saveOrUpdate(Employee student) {
-		employeeRepository.save(student);
+	public void saveOrUpdate(Employee employee) {
+		employeeRepository.save(employee);
 	}
 
 //deleting a specific record
