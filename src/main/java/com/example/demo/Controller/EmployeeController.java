@@ -28,7 +28,7 @@ public class EmployeeController {
 //creating a get mapping that retrieves the detail of a specific Employee
 	@GetMapping("/employee/{id}")
 	private Employee getEmployee(@PathVariable("id") int id) {
-		return employeeService.getStudentById(id);
+		return employeeService.getEmployeeById(id);
 	}
 
 //creating a delete mapping that deletes a specific Employee
