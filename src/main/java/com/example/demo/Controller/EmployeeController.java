@@ -19,27 +19,27 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 
-//creating a get mapping that retrieves all the students detail from the database 
+//creating a get mapping that retrieves all the Employee detail from the database 
 	@GetMapping("/employee")
-	private List<Employee> getAllStudent() {
-		return employeeService.getAllStudent();
+	private List<Employee> getAllEmployee() {
+		return employeeService.getAllEmployee();
 	}
 
-//creating a get mapping that retrieves the detail of a specific student
+//creating a get mapping that retrieves the detail of a specific Employee
 	@GetMapping("/employee/{id}")
-	private Employee getStudent(@PathVariable("id") int id) {
+	private Employee getEmployee(@PathVariable("id") int id) {
 		return employeeService.getStudentById(id);
 	}
 
-//creating a delete mapping that deletes a specific student
+//creating a delete mapping that deletes a specific Employee
 	@DeleteMapping("/employee/{id}")
-	private void deleteStudent(@PathVariable("id") int id) {
+	private void deleteEmployee(@PathVariable("id") int id) {
 		employeeService.delete(id);
 	}
 
-//creating post mapping that post the student detail in the database
+//creating post mapping that post the Employee detail in the database
 	@PostMapping("/employee")
-	private String saveStudent(@RequestBody Employee employee) {
+	private String saveEmployee(@RequestBody Employee employee) {
 		employeeService.saveOrUpdate(employee);
 		return "Data Saved Successfully";
 	}
